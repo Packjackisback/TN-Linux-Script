@@ -1,7 +1,8 @@
-#!/bin/bash
-# TODO add ascii
 for script in "$DIR"/*.sh; do
-  [[ -e "$script" ]] || {echo "No modules found"; break; }
+  if [[ ! -e "$script" ]]; then
+    echo "No modules found"
+    break
+  fi
 
   echo "Running $script"
   chmod +x "$script"
