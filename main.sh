@@ -1,4 +1,4 @@
-for script in "$DIR"/*.sh; do
+for script in "modules"/*.sh; do
   if [[ ! -e "$script" ]]; then
     echo "No modules found"
     break
