@@ -1,12 +1,8 @@
-for script in "modules"/*.sh; do
-  if [[ ! -e "$script" ]]; then
-    echo "No modules found"
-    break
-  fi
+#!/bin/bash
 
-  echo "Running $script"
-  chmod +x "$script"
-  "$script"
-  echo "Done with $script"
-  echo ""
-done
+cd modules
+./00-initial_setup.sh
+source 01-create_user.sh
+su - "$username"
+./02-install_packages.sh
+./03-enable_sddm.sh
