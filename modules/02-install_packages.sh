@@ -3,5 +3,5 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 fi
 
-sudo pacman -S base-devel linux-headers plasma kde-applications sddm
+sudo pacman -S base-devel linux-headers plasma kde-applications sddm --no-confirm
 
