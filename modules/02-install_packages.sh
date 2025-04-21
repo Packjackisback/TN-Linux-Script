@@ -4,5 +4,5 @@ if [[ $EUID -ne 0 ]]; then
 fi
 sudo pacman -S reflector --noconfirm
 reflector
-sudo pacman -S base-devel linux-headers plasma kde-applications sddm --noconfirm
+sudo pacman -S base-devel linux-headers plasma kde-applications sddm paru --noconfirm
 
